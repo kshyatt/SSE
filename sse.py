@@ -17,7 +17,7 @@ def diagonalUpdate( startConfig, bondList, operator, n, beta ):
                 operator[ time ] = 0 
                 n           -= 1 
                 sub += 1 
-        else: #we have an identity at this slice 
+        elif( operator[ time ] == 0 ): #we have an identity at this slice 
 
             #have to propagate the spins to this point
             currentConfig = [ 0 ] * len( startConfig )
